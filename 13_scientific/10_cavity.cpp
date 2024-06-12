@@ -5,26 +5,26 @@
 #include <cmath>
 
 using namespace std;
-typedef vector< vector<double> > matrix;
+typedef vector< vector<float> > matrix;
 
 int main() {
   const int nx = 41;
   const int ny = 41;
   const int nt = 500;
   const int nit = 50;
-  const double dx = 2.0 / (nx - 1);
-  const double dy = 2.0 / (ny - 1);
-  const double dt = 0.01;
-  const double rho = 1.0;
-  const double nu = 0.02;
+  const float dx = 2.0 / (nx - 1);
+  const float dy = 2.0 / (ny - 1);
+  const float dt = 0.01;
+  const float rho = 1.0;
+  const float nu = 0.02;
 
-  matrix u(ny,vector<double>(nx));
-  matrix v(ny,vector<double>(nx));
-  matrix p(ny,vector<double>(nx));
-  matrix b(ny,vector<double>(nx));
-  matrix un(ny,vector<double>(nx));
-  matrix vn(ny,vector<double>(nx));
-  matrix pn(ny,vector<double>(nx));
+  matrix u(ny,vector<float>(nx));
+  matrix v(ny,vector<float>(nx));
+  matrix p(ny,vector<float>(nx));
+  matrix b(ny,vector<float>(nx));
+  matrix un(ny,vector<float>(nx));
+  matrix vn(ny,vector<float>(nx));
+  matrix pn(ny,vector<float>(nx));
 
   // Initialize matrices with 0.0
   for (int j=0; j<ny; j++) {
